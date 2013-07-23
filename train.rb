@@ -1,18 +1,19 @@
 class Train
 
- def initalize (model, speed)
-   @model = model
+ def initialize (make, speed)
+   @make = make
    @speed = speed
  end
 
  def trip_duration(distance)
-  distance * speed
-end
+  distance * @speed
+  end
 
  def power_source
-  if @model.include?("-A")
+  if @make.include?("-A")
     'steam'
    else
     'diesel' 
-   end 
+  end 
+ end
 end
